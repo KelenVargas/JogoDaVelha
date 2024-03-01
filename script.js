@@ -65,8 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!gameOver && currentMode === "player-cpu") {
           makeCPUMove();
           checkGameStatus();
+          setTimeout
         }
-      }, 0);
+      }, 500);
     }
   }
   /* para o modo cpu vs cpu */
