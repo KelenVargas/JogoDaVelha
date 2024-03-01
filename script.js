@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function playCPUGame() {
     if (!gameOver && currentMode === "cpu") {
       setTimeout(() => {
-        makeCPUMove();
         checkGameStatus();
+        makeCPUMove();
         playCPUGame();
       }, 500);
     }
