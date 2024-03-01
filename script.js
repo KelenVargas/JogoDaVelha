@@ -51,21 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
     cells.forEach((cell) => {
       cell.textContent = "";
     });
-    currentPlayerDisplay.textContent = `Current Player: ${currentPlayer}`;
+    currentPlayerDisplay.textContent = `Vez do:${currentPlayer}`;
   }
 
   /* para fazer as jogadas humanas */
   function handleHumanMove(event) {
     if (!gameOver && cellIsEmpty(event.target)) {
       makeMove(event.target);
-      checkGameStatus();
 
-      if (!gameOver && currentMode === "player-cpu") {
-        setTimeout(() => {
+      setTimeout(() => {
+        checkGameStatus();
+
+        if (!gameOver && currentMode === "player-cpu") {
           makeCPUMove();
           checkGameStatus();
-        }, 0);
-      }
+        }
+      }, 0);
     }
   }
   /* para o modo cpu vs cpu */
@@ -99,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* para trocar os jogadores */
   function switchPlayer() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    currentPlayerDisplay.textContent = `Current Player: ${currentPlayer}`;
+    currentPlayerDisplay.textContent = `Vez do: ${currentPlayer}`;
   }
   /* vendo se há espaço em branco */
   function cellIsEmpty(cell) {
@@ -154,3 +155,10 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreDisplay.textContent = `Placar: X - ${score["X"]} | O - ${score["O"]}`;
   }
 });
+
+
+const reiniciarBtn = document.querySelector("[data-reiniciarBtn]");
+
+reiniciarBtn.addEventListener('click', () => {
+  window.location.reload();
+})
