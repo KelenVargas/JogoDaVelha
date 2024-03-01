@@ -2,7 +2,7 @@
     :construction:  Trabalho da UC -Jogo da Velha  :construction: 
 </h4>
 <p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=%20Em_Desenvolvimento&color=GREEN&style=for-the-badge"/>
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
 # :information_source: Sobre 
